@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import time
 import psycopg
 from psycopg.rows import dict_row
-from .settings.config import settings
+from settings.config import settings
 
 app = FastAPI()
 
