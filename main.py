@@ -4,7 +4,10 @@ from pydantic import BaseModel
 import time
 import psycopg
 from psycopg.rows import dict_row
+<<<<<<< HEAD
 from config import settings
+=======
+>>>>>>> bc47a157fb3409a3840ac2e9845ba98468d17a0b
 
 app = FastAPI()
 
@@ -14,7 +17,10 @@ class Post(BaseModel):
     content: str
     published: bool = True
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc47a157fb3409a3840ac2e9845ba98468d17a0b
 def CheckPost(post, response):
     if post:
         return post
@@ -24,6 +30,7 @@ def CheckPost(post, response):
 
 while True:
     try:
+<<<<<<< HEAD
         conn = psycopg.connect(
             dbname = settings.db_name,
             user = settings.db_user,
@@ -32,6 +39,9 @@ while True:
             host = settings.db_host,
             row_factory=dict_row,
         )
+=======
+        conn = psycopg.connect("dbname=fastapi user=postgres password=Poophacked1234", row_factory=dict_row)
+>>>>>>> bc47a157fb3409a3840ac2e9845ba98468d17a0b
         cursor = conn.cursor()
         break
     except Exception as error:
